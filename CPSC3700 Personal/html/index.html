@@ -5,13 +5,16 @@
   <title>Casey's Personal Project</title>
   <link rel="icon" type="image/x-icon" href="../images/favicond.ico">
   <link rel="stylesheet" href="../css/pproject1.css">
+  <link rel="stylesheet" href="https://use.typekit.net/pmq3koy.css">
 </head>
 
 
 <body>
   <ul>
     <li><a class = "active" href = "../html/index.html">Home</a></li>
+    <li><a href = "../html/work.html">Work</a></li>
     <li><a href = "../html/about.html">About</a></li>
+    <li><a href = "../html/contact.html">Contact</a></li>
    <!-- <li style = "float:right"><a class = "active" href = "../html/index.html">Home</a></li>-->
   </ul>
   <div class = "navbar">
@@ -21,9 +24,8 @@
 
 
   </div>
-
-  <h1>Home</h1> 
-  <h2>Casey Horio<h2>
+  <h1>Casey Horio Designs</h1>
+  <!--<h2>Casey Horio Designs<h2>-->
   <p>The subject of my personal website will be to display some of my design works and potentially use it in the future to get jobs. </p>
   <img id="image" src="../images/design.jpg" alt="design", class="center">
   <button type="button" onclick="displayImage()" id="buttonID" class="center">
@@ -35,6 +37,17 @@
   <button type="button" onclick="displayImage()" id="buttonID">Click on me to change the image </button>
   <button onclick="displayImage()" id="button">Click on me to change the image</button>-->
   
+  <a href = "../html/work.html" class="explore-work-button">Explore Work</a>
+
+  <!--<button type="button" id="buttonID" class = "explore-work-button"><form action="../html/work.html">
+    <input type="submit" value="Explore My Work" />
+  </form> </button> -->
+
+  <!--<p class = "explore-work-button"><form action="../html/work.html">
+       <input type="submit" value="Explore My Work" />
+     </form> 
+  </p>-->
+
   <script>
   function displayImage() {
     let image = document.getElementById("image").style.display="block";
