@@ -1,0 +1,34 @@
+  body {
+    background-color: lightblue;
+  }
+  h2 {
+	background-color: lightblue;
+	color: mediumseagreen;
+	text-align: left;
+	font-family: Helvetica, sans-serif;
+	font-size: 50px;
+  }
+  #image {
+	  display: none;
+  }
+  p {
+	background-color: white;
+    color: red;
+	text-align: center;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 20px;
+  }
+  .center p {
+	  margin-left: auto;
+	  margin-right: auto;
+  }
+  .center buttonID{
+	  margin-left: auto;
+	  margin-right: auto;
+  }
+  .center {
+	  display: block;
+	  margin-left: auto;
+	  margin-right: auto;
+	  width: 50%;
+  }

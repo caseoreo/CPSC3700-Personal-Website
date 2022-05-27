@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Casey's Personal Project</title>
+  <link rel="icon" type="image/x-icon" href="faviconamogus.ico">
+  <link rel="stylesheet" href="pproject1.css">
+</head>
+
+
+<body>
+
+  <h1>Welcome to your webpage</h1> 
+  <h2>Casey Horio<h2>
+  <p>The subject of my personal website will be to display some of my design works and potentially use it in the future to get jobs. </p>
+  <img id="image" src="design.jpg" alt="design", class="center">
+  <button type="button" onclick="displayImage()" id="buttonID" class="center">
+    Show Image
+	</button>
+  <!--mg id="design2" src""/>
+  <p id="demo"> Click below!</p>
+  <p id="button"</p>
+  <button type="button" onclick="displayImage()" id="buttonID">Click on me to change the image </button>
+  <button onclick="displayImage()" id="button">Click on me to change the image</button>-->
+  
+  <script>
+  function displayImage() {
+    let image = document.getElementById("image").style.display="block";
+	<!--image.src="designphone.jpg"-->
+	document.getElementById("buttonID").style.display="none";
+	}
+  </script>
+	<!--<img id="demo" src="designphone.jpg">
+	<button onclick='document.getElementById("demo").src="designphone.jpg"'>Click me to change image</button>
+    -->
+</body>
+</html>
+
