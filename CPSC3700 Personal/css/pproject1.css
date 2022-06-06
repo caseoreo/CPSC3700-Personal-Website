@@ -7,13 +7,24 @@
   }
 
   h1{
-	background-color: #f8f0e3;
+	/*background-color: #f8f0e3;*/
 	color: #383634;
 	text-align: center;
 	font-family: tenso, sans-serif;
 	font-size: 70px;
 	font-weight: 700;
 	font-style: normal;
+	margin-top: 10px;
+  }
+  .title{
+	/*background-color: #383634;*/
+	color: #f8f0e3;
+	text-align: center;
+	font-family: tenso, sans-serif;
+	font-size: 100px;
+	font-weight: 700;
+	font-style: normal;
+	padding: 15px;
   }
   h2 {
 	background-color: #f8f0e3;
@@ -24,6 +35,18 @@
 	font-weight: 500;
 	font-style: normal;
   }
+
+  h3 {
+	background-color: #f8f0e3;
+	color: #383634;
+	text-align: left;
+	font-family: tenso, sans-serif;
+	font-size: 30px;
+	font-weight: 400;
+	font-style: normal;
+	margin: 0px 100px 0px 100px;
+  }
+
   #image {
 	  display: none;
   }
@@ -47,11 +70,12 @@
   .about-name {
 	background-color: #f8f0e3;
 	color: #383634;
-	text-align: center;
+	text-align: left;
 	font-family: tenso, sans-serif;
 	font-size: 50px;
 	font-weight: 500;
 	font-style: normal;
+	margin: 0px 100px 0px 100px;
   }
 
   .about-text {
@@ -158,10 +182,20 @@
   }
   .image-portrait {
 	  float: right;
-	  max-width: 25%;
-	  height: 20%;
+	  max-width: 33%;
+	  height: 100%;
 	  /*border: 1px dotted black;*/
-	  margin:0px 200px 200px 100px;
+	  margin:0px 50px 100px 100px;
+	  padding-bottom: 20px;
+  }
+
+  .image-work {
+	float: right;
+	max-width: 28%;
+	height: 100%;
+	/*border: 1px dotted black;*/
+	margin:0px 50px 100px 100px;
+	padding-bottom: 20px;
   }
 
   input, textarea {
@@ -184,11 +218,43 @@
 	  background-repeat: no-repeat;
 	  background-size: cover;
   }
-  .container {
+
+  .container-image-button {
+	  position: relative;
+	  width: 100%;
+	  height: auto;
+  }
+
+  .container-image-button img {
+	  width: 100%;
+	  height: 80%;
+  }
+
+  .container-image-button .btn {
+	  position: absolute;
+	  top: 40%;
+	  left: 50%;
+	  transform: translate(-50%,-50%);
+	  -ms-transform: translate(-50%, -50%);
+	  background-color: #383634;
+	  color:white;
+	  font-size: 16px;
+	  padding: 12px 24px;
+	  border: none;
+	  cursor: pointer;
+	  border-radius: 5px;
+	  text-align: center;
+  }
+  
+  .container-image-button .btn:hover {
+	  background-color: #7B94AB;
+  }
+
+  /*.container {
 	position: relative;
 	text-align: center;
 	color: white;
-  }
+  }*/
 
   .caption {
 	position: absolute;
@@ -199,19 +265,63 @@
     color: #f8f0e3;
   }
 
-  /*.caption span.border {
+  .caption span.border {
     background-color: #383634;
     color: #f8f0e3;
     padding: 18px;
     font-size: 25px;
     letter-spacing: 10px;
-  }*/
+  }
   
   .centered {
 	position: absolute;
-	top: 50%;
+	top: 20%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+  }
+
+  .column-work {
+	  float: left;
+	  width: 33%;
+	  height: 25%;
+	  padding: 10px;
+  }
+
+  .column-work img{
+	  opacity: 0.8;
+	  cursor: pointer;
+  }
+
+  .column-work img:hover{
+	  opacity: 1;
+  }
+
+  .row-work:after {
+      content: "";
+	  display: table;
+	  clear: both;
+  }
+
+  .container-work{
+	  position: relative;
+	  display: none;
+  }
+
+  #imgtext{
+	  position: absolute;
+	  bottom: 15px;
+	  left: 15px;
+	  color: #f8f0e3;
+	  font-size: 20px;
+  }
+
+  .closebtn {
+	  position: aboslute;
+	  top: 10px;
+	  right: 15px;
+	  color: #f8f0e3;
+	  font-size: 35px;
+	  cursor: pointer;
   }
 
   .row {
@@ -245,6 +355,86 @@
 	width: 30rem;
 	height: 15rem;
   } */
+
+  #myImg {
+	  border-radius: 5px;
+	  cursor: pointer;
+	  transition: 0.3s;
+  }
+
+  #myImg:hover {opacity: 0.7;}
+
+  .modal {
+	  display: none;
+	  position: fixed;
+	  z-index: 1;
+	  padding-top: 100px;
+	  left: 0;
+	  top: 0;
+	  width: 100%;
+	  height: 100%;
+	  overflow: auto;
+	  background-color: rgb(0,0,0);
+	  background-color: rgba(0,0,0,0.9);
+  }
+
+  .modal-content {
+	  margin: auto;
+	  display: block;
+	  height: 80%;
+	  max-width: 700px;
+  }
+
+  #caption {
+	  margin: auto;
+	  display: block;
+	  width: 80%;
+	  max-width: 700px;
+	  text-align: center;
+	  color: #f8f0e3;
+	  padding: 10px 0;
+	  height: 150px;
+  }
+
+  .modal-content, #caption {
+	  -webkit-animation-name: zoom;
+	  -webkit-animation-duration: 0.6s;
+	  animation-name: zoom;
+	  animation-duration: 0.6s;
+  }
+
+  @-webkit-keyframes zoom {
+	  from {-webkit-transform:scale(0)}
+	  to {-webkit-transform:scale(1)}
+  }
+
+  @keyframes zoom {
+	  from {transform: scale(0)}
+	  to {transform: scale(1)}
+  }
+
+  .close {
+	  position: absolute;
+	  top: 15px;
+	  right: 35px;
+	  color: #f1f1f1;
+	  font-size: 40px;
+	  font-weight: bold;
+	  transition: 0.3s;
+  }
+
+  .close:hover,
+  .close:focus {
+	  color: #bbb;
+	  text-decoration: none;
+	  cursor: pointer;
+  }
+
+  @media only screen and (max-width: 700px){
+	  .modal-content {
+		  width:100%;
+	  }
+  }
 
   #linkedin-icon{
 	background: url(..//images/linkedinicon.png);
