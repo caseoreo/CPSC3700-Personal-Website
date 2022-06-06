@@ -27,6 +27,7 @@
   #image {
 	  display: none;
   }
+
   p {
 	background-color: #f8f0e3;
     color: #78746E;
@@ -35,6 +36,12 @@
     font-weight: 400;
 	font-style: normal;
 	font-size: 20px;
+  }
+
+  .logo {
+	float: left;
+	display: inline;
+	padding: 0px;
   }
 
   .about-name {
@@ -48,18 +55,20 @@
   }
 
   .about-text {
-	background-color: white;
-    color: #78746E;
+	background-color:#f8f0e3;
+    color: #383634;
 	display: block;
 	text-align: left;
-	float: right;
+	/*float: left;*/
 	font-family: tenso, sans-serif;
     font-weight: 400;
 	font-style: normal;
 	font-size: 20px;
 	line-height: 1.8;
-	margin: 25px 200px 75px 50px;
+	margin: 0px 100px 75px 100px;
 	width: 50%;
+	align-items: center;
+	
   }
 
   .contact-text {
@@ -148,10 +157,11 @@
 
   }
   .image-portrait {
-	  float: left;
-	  max-width: 50%;
-	  height: auto;
-	  margin:25px 50px 75px 200px;
+	  float: right;
+	  max-width: 25%;
+	  height: 20%;
+	  /*border: 1px dotted black;*/
+	  margin:0px 200px 200px 100px;
   }
 
   input, textarea {
@@ -162,14 +172,79 @@
 	  box-sizing: border-box;
   }
 
+  body, html {
+	  height: 100%;
+	  margin: 0;
+  }
+
+  .bg {
+	  background-image: url("../images/2.jpg");
+	  height: 100%;
+	  background-position: center;
+	  background-repeat: no-repeat;
+	  background-size: cover;
+  }
+  .container {
+	position: relative;
+	text-align: center;
+	color: white;
+  }
+
+  .caption {
+	position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #f8f0e3;
+  }
+
+  /*.caption span.border {
+    background-color: #383634;
+    color: #f8f0e3;
+    padding: 18px;
+    font-size: 25px;
+    letter-spacing: 10px;
+  }*/
+  
+  .centered {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+  }
+
   .row {
 	  display: flex;
   }
 
   .column {
 	  flex: 33.33%;
-	  padding: 15px;
+	  padding: 5px;
   }
+
+  .column-socials {
+	flex: 33.33%;
+	padding: 5px;
+	margin-left: 12.5rem;
+  }
+
+  .socials{
+	position:relative;
+	min-width: 100%;
+	min-height: 10rem;
+	bottom: 0
+  }
+
+ /* .footer{
+	display:grid;
+	grid-template-columns: 3;
+	grid-template-rows: 2;
+	justify-items: center;
+	margin:auto;
+	width: 30rem;
+	height: 15rem;
+  } */
 
   #linkedin-icon{
 	background: url(..//images/linkedinicon.png);
